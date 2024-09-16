@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/Logo.svg';
 import styles from './footer.module.scss';
 
 export const Footer = () => {
