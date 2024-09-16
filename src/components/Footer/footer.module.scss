@@ -1,0 +1,79 @@
+@import '../../variables.scss' ;
+
+.footer {
+    background-color: $secondaryColor;
+    padding: 64px 5%;
+
+    p {
+        color: $whiteColor;
+        max-width: 488px;
+
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    flex-direction: column;
+}
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 600px;
+    z-index: 1;
+
+    p {
+        color: $primaryColor;
+        font-weight: 400;
+        max-width: 488px;
+    }
+
+    h3 {
+        color: $whiteColor;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 40px;
+        text-transform: capitalize;
+        max-width: 488px;
+    
+        @media screen and (min-width: $breakpointMobile) {
+            font-size: 90px;
+            line-height: 60px;
+        }
+    }
+
+    h4 {
+        color: $whiteColor;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 40px;
+        max-width: 488px;
+    }
+}
+
+.but {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+
+    img {
+        width: 90px;
+    }
+
+    @media screen and (min-width: $breakpointMobile) {
+        flex-direction: row;
+        
+    }
+}
+
+hr {
+    width: 100%;
+    margin: 30px 0;
+}

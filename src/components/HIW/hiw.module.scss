@@ -1,0 +1,107 @@
+@import "../../variables.scss";
+
+.HIW {
+    padding: 64px 5%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @media screen and (min-width: $breakpointMobile) {
+        gap: 100px;
+    }
+}
+
+.wrapper {
+    display: grid;
+    gap: 1rem;
+    max-width: 1350px;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr; 
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  h2 {
+    color: $blackColor;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: capitalize;
+    max-width: 609px;
+    width: 100%;
+    span {
+      color: $tertiaryColor;
+    }
+
+    @media screen and (min-width: $breakpointMobile) {
+      font-size: 40px;
+      line-height: 60px;
+    }
+
+    @media screen and (min-width: $breakpointTablet) {
+      font-size: $heading1;
+    }
+  }
+
+  p {
+    margin-top: 24px;
+    color: $blackColor;
+    max-width: 660px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 475px;
+  }
+
+  @media screen and (min-width: $breakpointMobile) {
+    text-align: start;
+    max-width: 600px;
+  }
+}
+
+.step{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 24px;
+}
+.stptitle {
+  display: flex;
+  gap: 22px;
+
+  p {
+    color: $blackColor;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
+
+.Ldescription ,
+.description {
+    padding: 5px 0;
+    padding-left: 34px;
+    border-left: 4px solid $primaryColor;
+    max-width: 478px;
+    margin-left: 10px;
+}
+
+.Ldescription {
+    border-left: 4px solid $whiteColor;
+}

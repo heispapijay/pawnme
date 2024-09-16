@@ -1,0 +1,48 @@
+@import "../../variables.scss";
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: $secondaryColor;
+  font-size: $fontSize2;
+  font-weight: 600;
+  line-height: 150%;
+  display: inline-flex;
+  padding: 10px 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 35px;
+  background-color: $primaryColor;
+  max-width: fit-content;
+  position: relative;
+  z-index: 1;
+  right: -28px;
+}
+
+.main2,
+.main {
+  display: inline-flex;
+  padding: 51px 28px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+  border-radius: 20px;
+  background: $secondaryColor;
+  color: $whiteColor;
+  color: $whiteColor;
+  font-size: $fontSize2;
+  max-width: 400px;
+  position: relative;
+  top: -20px;
+}
+
+.main2 {
+  background: #f0f0f0;
+  color: $blackColor;
+}

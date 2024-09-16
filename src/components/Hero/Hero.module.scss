@@ -1,0 +1,120 @@
+@import "../../variables.scss";
+
+.hero {
+  background-color: $secondaryColor;
+  position: relative;
+  padding: 60px 5%;
+  padding-top: 130px;
+}
+
+.wrapper {
+    display: grid;
+    gap: 1rem;
+    max-width: 1350px;
+    align-items: center;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr; 
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  display: flex;
+  padding: 10px 11px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  border-radius: 35px;
+  border: 1px solid $whiteColor;
+  color: $whiteColor;
+}
+
+.title {
+  color: $whiteColor;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 40px;
+  text-transform: capitalize;
+  max-width: 581px;
+  span {
+    color: $primaryColor;
+  }
+
+  @media screen and (min-width: $breakpointMobile) {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  @media screen and (min-width: $breakpointTablet) {
+    font-size: $heading1;
+  }
+}
+
+.users {
+  width: 152px;
+  height: 54px;
+}
+
+.text {
+  color: $whiteColor;
+  font-size: $fontSize2;
+}
+
+button {
+  display: flex;
+  padding: 14px 22px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid $primaryColor;
+  background: $primaryColor;
+  color: $secondaryColor;
+  font-size: 14px;
+
+  @media screen and (min-width: $breakpointMobile) {
+    max-width: fit-content;
+  }
+}
+
+.mobile {
+  width: 100%;
+  max-width: 578px;
+  z-index: 99;
+
+    @media screen and (min-width: $breakpointMobile) {
+        scale: 1.2;
+    }
+
+    @media screen and (min-width: $breakpointTablet) {
+        scale: 1;
+    }
+}
+
+.bg,
+.bgl {
+  position: absolute;
+  top: 9%;
+  right: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.bgl {
+  left: 0;
+  top: 30%;
+}

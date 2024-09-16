@@ -1,0 +1,69 @@
+@import '../../variables.scss' ;
+
+.overview {
+    padding: 64px 5%;
+}
+
+// .wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 24px;
+//     max-width: 1350px;
+//     margin: 0 auto;
+
+//     @media screen and (min-width: $breakpointMobile) {
+//       flex-direction: row;
+//         justify-content: space-between;
+        
+//     }
+// }
+
+.wrapper {
+    display: grid;
+    gap: 1rem;
+    max-width: 1350px;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr; 
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+
+  h2 {
+    color: $blackColor;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: capitalize;
+    max-width: 488px;
+    span {
+      color: $tertiaryColor;
+    }
+  
+    @media screen and (min-width: $breakpointMobile) {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  
+    @media screen and (min-width: $breakpointTablet) {
+      font-size: $heading1;
+    }
+  }
+}
+
+.container2 {
+    max-width: 600px;
+}

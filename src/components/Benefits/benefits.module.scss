@@ -1,0 +1,80 @@
+@import '../../variables.scss' ;
+
+.benefits {
+    padding: 64px 5%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    h2 {
+        color: $blackColor;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+        text-transform: capitalize;
+        max-width: 609px;
+        span {
+          color: $tertiaryColor;
+        }
+      
+        @media screen and (min-width: $breakpointMobile) {
+          font-size: 40px;
+          line-height: 60px;
+        }
+      
+        @media screen and (min-width: $breakpointTablet) {
+          font-size: $heading1;
+        }
+      }
+
+      p {
+        margin-top: 24px;
+        color: $blackColor;
+        max-width: 660px;
+      }
+}
+
+.cards {
+    display: grid;
+    gap: 16px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Mobile: 1 column */
+@media (max-width: 767px) {
+    .cards {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+/* Tablet: 2 columns, with the last one on its own row */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    .cards > *:nth-child(3) {
+        grid-column: 1 / span 2; /* Make the 3rd card span across both columns */
+        justify-self: center; /* Center the 3rd card */
+        width: fit-content; 
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1025px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
